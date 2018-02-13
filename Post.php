@@ -2,10 +2,15 @@
 
 declare(strict_types=1);
 
-class Author {
+class Post{
 
   protected $title;
-  protected $author = new Author();
+  protected $author;
+
+  public function __construct(string $title)
+    {
+        $this->title = $title;
+    }
 
   public function getTitle(): string
   {
